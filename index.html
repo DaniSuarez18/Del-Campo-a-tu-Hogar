@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Del Campo a tu Hogar</title>
+    <link rel="stylesheet" href="styless.css">
+    <link rel="icon" href="LOGO.jpg" type="image/jpeg">
+</head>
+<body>
+
+    <header id="main-header" class="hidden">
+        <div class="header-container">
+            <h1 class="logo"><img src="LOGO.jpg" alt="Logo" class="site-logo"> Del Campo a tu Hogar</h1>
+            <nav>
+                <span id="user-display" class="user-welcome"></span>
+                <button class="btn btn-outline" id="btn-logout">Salir</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-view" class="view active">
+            <div class="hero-content">
+                <img src="LOGO.jpg" alt="Logo" class="site-logo-form">
+                <h1 class="hero-title">Del Campo a tu Hogar</h1>
+                <p class="hero-description">
+                    Somos una comunidad dedicada a llevar lo natural y la frescura del campo directamente a tu mesa. 
+                    Conectamos a pequeños productores de leche, yogurt y arequipe con familias de la región que valoran lo natural.
+                </p>
+                <button class="btn btn-primary btn-hero" onclick="showAuth()">¡Únete a nuestra comunidad!</button>
+            </div>
+        </section>
+
+        <section id="auth-view" class="view auth-wrapper">
+            <div class="container-double" id="container-double">
+                <div class="form-container-double sign-up-container">
+                    <form id="register-form">
+                        <h1>Crear Cuenta</h1>
+                        <input type="text" id="reg-name" placeholder="Nombre completo" required />
+                        <input type="email" id="reg-email" placeholder="Correo electrónico" required />
+                        <input type="password" id="reg-password" placeholder="Contraseña" required />
+                        
+                        <div class="role-selector">
+                            <p>¿Qué quieres hacer?</p>
+                            <div class="role-buttons">
+                                <button type="button" class="btn-role" id="btn-comprador" onclick="selectRole('comprador')">Comprar</button>
+                                <button type="button" class="btn-role" id="btn-vendedor" onclick="selectRole('vendedor')">Vender</button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </form>
+                </div>
+
+                <div class="form-container-double sign-in-container">
+                    <form id="login-form">
+                        <h1>Iniciar Sesión</h1>
+                        <input type="email" id="login-email" placeholder="Correo electrónico" required />
+                        <input type="password" id="login-password" placeholder="Contraseña" required />
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
+                </div>
+                
+                <div class="overlay-container-double">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>¡Bienvenido!</h1>
+                            <p>Si ya tienes cuenta, ingresa con tus datos.</p>
+                            <button class="btn btn-outline-white" id="signInBtn">Ir al Login</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>¿Eres nuevo?</h1>
+                            <p>Regístrate y comienza a disfrutar lo mejor del campo.</p>
+                            <button class="btn btn-outline-white" id="signUpBtn">Crear Cuenta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard-vendedor" class="view"></section>
+        <section id="dashboard-comprador" class="view"></section>
+    </main>
+
+    <div id="notification" class="notification hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

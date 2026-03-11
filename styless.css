@@ -1,0 +1,244 @@
+/*VARIABLES Y RESET*/
+:root {
+    --primary: #007bff;
+    --teal: #1abc9c;
+    --dark: #343a40;
+    --shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f6f5f7;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*MANEJO DE VISTAS (ESTO CORRIGE EL DESORDEN)*/
+.view {
+    display: none; /*Oculta todas las secciones por defecto*/
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.view.active {
+    display: flex; /*Solo muestra la que tenga la clase "active"*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/*Primera Sección (NOSOTROS)*/
+.hero-content {
+    max-width: 800px;
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.site-logo-form {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    color: var(--teal);
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.hero-description {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/*Botones*/
+.btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--teal);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #16a085;
+    transform: scale(1.05);
+}
+
+/* --- ESTILOS DEL DOUBLE FORM (LOGIN ANIMADO) --- */
+.auth-wrapper {
+    height: 100vh;
+}
+
+.container-double {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 520px;
+}
+
+.form-container-double {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    width: 50%;
+}
+
+.sign-in-container {
+    left: 0;
+    z-index: 2;
+}
+
+.container-double.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.sign-up-container {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container-double.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%, 49.99% { opacity: 0; z-index: 1; }
+    50%, 100% { opacity: 1; z-index: 5; }
+}
+
+/* --- OVERLAY ANIMADO --- */
+.overlay-container-double {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container-double.right-panel-active .overlay-container-double {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: var(--teal);
+    background: linear-gradient(to right, #16a085, var(--teal));
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container-double.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left { transform: translateX(-20%); }
+.container-double.right-panel-active .overlay-left { transform: translateX(0); }
+
+.overlay-right { right: 0; transform: translateX(0); }
+.container-double.right-panel-active .overlay-right { transform: translateX(20%); }
+
+.btn-outline-white {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-top: 15px;
+}
+
+/*Formulario Sesión*/
+form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.role-selector { margin: 15px 0; }
+.role-buttons { display: flex; gap: 10px; margin-top: 5px; }
+.btn-role {
+    padding: 5px 15px;
+    border: 1px solid var(--teal);
+    background: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.btn-secondary-selected {
+    background: var(--teal);
+    color: white;
+}
+
+/*Animación Login*/
+
+.cow-anim {
+    width: 150px; /* Ajusta el tamaño según prefieras */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Opcional: para que se vea circular */
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    animation: float 3s ease-in-out infinite; /* Animación de flotado */
+}
