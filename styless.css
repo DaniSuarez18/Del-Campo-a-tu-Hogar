@@ -1,9 +1,12 @@
-/*VARIABLES Y RESET*/
+/*VARIABLES CON NUEVA PALETA*/
 :root {
-    --primary: #007bff;
-    --teal: #1abc9c;
-    --dark: #343a40;
-    --shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    --primary: #005461;
+    --secondary: #018790;
+    --accent: #00b7b5;
+    --background: #F4F4F4;
+    --white: #FFFFFF;
+    --text: #333;
+    --shadow: 0 14px 28px rgba(0, 0, 0, 0, 15), 0 10px 10px rgba(0, 0, 0, 0.1);
     --radius: 8px;
 }
 
@@ -14,14 +17,14 @@
 }
 
 body {
-    background: #f6f5f7;
+    background: var(--background);
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/*MANEJO DE VISTAS (ESTO CORRIGE EL DESORDEN)*/
+/*MANEJO DE VISTAS*/
 .view {
     display: none; /*Oculta todas las secciones por defecto*/
     width: 100%;
@@ -40,7 +43,30 @@ body {
     display: none !important;
 }
 
-/*Primera Sección (NOSOTROS)*/
+/*HEADER*/
+header {
+    background: var(--primary);
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-logo {
+    width: 40px; 
+    vertical-align: middle; 
+    margin-right: 10px;
+}
+
+/*HERO SECTION*/
 .hero-content {
     max-width: 800px;
     background: white;
@@ -55,7 +81,7 @@ body {
 }
 
 .hero-title {
-    color: var(--teal);
+    color: var(--primary);
     margin-bottom: 15px;
     font-size: 2.5rem;
 }
@@ -78,16 +104,16 @@ body {
 }
 
 .btn-primary {
-    background: var(--teal);
+    background: var(--accent);
     color: white;
 }
 
 .btn-primary:hover {
-    background: #16a085;
+    background:var(--secondary);
     transform: scale(1.05);
 }
 
-/* --- ESTILOS DEL DOUBLE FORM (LOGIN ANIMADO) --- */
+/*DOUBLE FORM (LOGIN ANIMADO)*/
 .auth-wrapper {
     height: 100vh;
 }
@@ -138,7 +164,7 @@ body {
     50%, 100% { opacity: 1; z-index: 5; }
 }
 
-/* --- OVERLAY ANIMADO --- */
+/*OVERLAY ANIMADO*/
 .overlay-container-double {
     position: absolute;
     top: 0;
@@ -155,8 +181,7 @@ body {
 }
 
 .overlay {
-    background: var(--teal);
-    background: linear-gradient(to right, #16a085, var(--teal));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     color: #FFFFFF;
     position: relative;
     left: -100%;
@@ -222,23 +247,14 @@ input {
 .role-buttons { display: flex; gap: 10px; margin-top: 5px; }
 .btn-role {
     padding: 5px 15px;
-    border: 1px solid var(--teal);
+    border: 1px solid var(--primary);
     background: white;
     cursor: pointer;
     border-radius: 15px;
+    color: var(--primary);
 }
+
 .btn-secondary-selected {
-    background: var(--teal);
+    background: var(--primary);
     color: white;
-}
-
-/*Animación Login*/
-
-.cow-anim {
-    width: 150px; /* Ajusta el tamaño según prefieras */
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 50%; /* Opcional: para que se vea circular */
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    animation: float 3s ease-in-out infinite; /* Animación de flotado */
 }
