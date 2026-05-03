@@ -1,260 +1,469 @@
-/*VARIABLES CON NUEVA PALETA*/
+/* VARIABLES CON NUEVA PALETA */
 :root {
-    --primary: #005461;
-    --secondary: #018790;
-    --accent: #00b7b5;
-    --background: #F4F4F4;
-    --white: #FFFFFF;
-    --text: #333;
-    --shadow: 0 14px 28px rgba(0, 0, 0, 0, 15), 0 10px 10px rgba(0, 0, 0, 0.1);
-    --radius: 8px;
+  --primary: #005461;
+  --secondary: #018790;
+  --accent: #00b7b5;
+  --background: #f4f4f4;
+  --white: #ffffff;
+  --text: #333;
+  --shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: var(--background);
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background: var(--background);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/*MANEJO DE VISTAS*/
+/* CONTENEDOR PRINCIPAL: CENTRADO TOTAL */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* MANEJO DE VISTAS */
+/* MANEJO DE VISTAS */
 .view {
-    display: none; /*Oculta todas las secciones por defecto*/
-    width: 100%;
-    padding: 50px 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.view.active {
-    display: flex; /*Solo muestra la que tenga la clase "active"*/
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/* MODIFICACIÓN: Prioridad absoluta para ocultar */
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
-/*HEADER*/
+/* MODIFICACIÓN: Quitamos el display:none de .view y dejamos que .hidden haga el trabajo */
+.view.active {
+  display: flex;
+}
+
+/* HEADER */
 header {
-    background: var(--primary);
-    color: white;
-    padding: 10px 0;
-    width: 100%;
+  background: var(--primary);
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
-header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .site-logo {
-    width: 40px; 
-    vertical-align: middle; 
-    margin-right: 10px;
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
-/*HERO SECTION*/
+.user-welcome {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
 .hero-content {
-    max-width: 800px;
-    background: white;
-    padding: 40px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+  max-width: 700px;
+  width: 95%;
+  background: white;
+  padding: 50px 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .site-logo-form {
-    width: 120px;
-    margin-bottom: 20px;
+  width: 160px;
+  margin-bottom: 20px;
 }
 
 .hero-title {
-    color: var(--primary);
-    margin-bottom: 15px;
-    font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 2.8rem;
 }
 
-.hero-description {
-    color: #666;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-/*Botones*/
+/* BOTONES GENERALES */
 .btn {
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s;
+  padding: 12px 35px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 .btn-primary {
-    background: var(--accent);
-    color: white;
+  background: var(--accent);
+  color: white;
 }
 
 .btn-primary:hover {
-    background:var(--secondary);
-    transform: scale(1.05);
+  background: var(--secondary);
+  transform: scale(1.05);
 }
 
-/*DOUBLE FORM (LOGIN ANIMADO)*/
+.btn-outline {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+/* DOUBLE FORM (LOGIN ANIMADO) */
 .auth-wrapper {
-    height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-double {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 520px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 520px;
 }
 
 .form-container-double {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
-    width: 50%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  width: 50%;
 }
 
 .sign-in-container {
-    left: 0;
-    z-index: 2;
+  left: 0;
+  z-index: 2;
 }
-
 .container-double.right-panel-active .sign-in-container {
-    transform: translateX(100%);
+  transform: translateX(100%);
 }
-
 .sign-up-container {
-    left: 0;
-    opacity: 0;
-    z-index: 1;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
 }
-
 .container-double.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-    animation: show 0.6s;
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
 }
 
 @keyframes show {
-    0%, 49.99% { opacity: 0; z-index: 1; }
-    50%, 100% { opacity: 1; z-index: 5; }
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
 }
 
-/*OVERLAY ANIMADO*/
 .overlay-container-double {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
 }
 
 .container-double.right-panel-active .overlay-container-double {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .overlay {
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    color: #FFFFFF;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
 }
 
 .container-double.right-panel-active .overlay {
-    transform: translateX(50%);
+  transform: translateX(50%);
 }
 
 .overlay-panel {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    transition: transform 0.6s ease-in-out;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: transform 0.6s ease-in-out;
 }
 
-.overlay-left { transform: translateX(-20%); }
-.container-double.right-panel-active .overlay-left { transform: translateX(0); }
-
-.overlay-right { right: 0; transform: translateX(0); }
-.container-double.right-panel-active .overlay-right { transform: translateX(20%); }
-
-.btn-outline-white {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    margin-top: 15px;
+.overlay-panel p {
+  margin: 20px 0 10px 0;
 }
 
-/*Formulario Sesión*/
+.overlay-left {
+  transform: translateX(-20%);
+}
+.container-double.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+.container-double.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+/* FORMULARIOS INTERNOS */
 form {
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    height: 100%;
-    text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
 }
 
 input {
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
-    border-radius: 4px;
+  background-color: #f0f2f5;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: var(--radius);
 }
 
-.role-selector { margin: 15px 0; }
-.role-buttons { display: flex; gap: 10px; margin-top: 5px; }
+.role-selector {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
 .btn-role {
-    padding: 5px 15px;
-    border: 1px solid var(--primary);
-    background: white;
-    cursor: pointer;
-    border-radius: 15px;
-    color: var(--primary);
+  padding: 8px 20px;
+  border: 2px solid var(--primary);
+  background: white;
+  cursor: pointer;
+  border-radius: 20px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.btn-role:hover {
+  background: #f0f7f8;
 }
 
 .btn-secondary-selected {
-    background: var(--primary);
-    color: white;
+  background: var(--primary);
+  color: white;
+}
+
+/* --- NUEVOS ESTILOS PARA LA CUADRÍCULA Y TARJETAS DE PRODUCTOS CON IMAGEN --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Tarjetas un poco más anchas */
+  gap: 30px;
+  margin-top: 35px;
+  width: 100%;
+}
+
+.product-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden; /* Asegura que la imagen respete los bordes redondeados */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+/* MODIFICACIÓN: Contenedor para que la imagen mantenga proporción */
+.product-image-container {
+  width: 100%;
+  height: 200px; /* Alto fijo para la imagen */
+  overflow: hidden;
+  background-color: #f9f9f9; /* Fondo por si la imagen tarda en cargar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MODIFICACIÓN: Estilo de la imagen subida*/
+.product-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen para llenar el contenedor sin deformarse[cite: 2] */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card-image {
+  transform: scale(1.05); /* Pequeño efecto de zoom al pasar el mouse */
+}
+
+/* MODIFICACIÓN: Contenedor de texto ajustado[cite: 2] */
+.product-details {
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Empuja el botón hacia abajo si hay poco texto[cite: 2] */
+}
+
+.product-details h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-seller {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: auto; /* Empuja el botón al fondo[cite: 2] */
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 768px) {
+  .container-double {
+    width: 95%;
+    min-height: 650px;
+  }
+  .form-container-double {
+    width: 100%;
+    height: 70%;
+  }
+  .overlay-container-double {
+    top: 70%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+  }
+
+  /* Ajuste de cuadrícula en celular*/
+  .product-grid {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+  }
+}
+
+/* Ajuste final para celular*/
+@media (max-width: 600px) {
+  .container-double {
+    width: 90%;
+    min-height: 550px; /* Un poco más alto para que quepa todo el contenido */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form-container-double {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none; /* Evita clics en el formulario oculto */
+  }
+
+  /* El formulario de login es el que manda al inicio */
+  .sign-in-container {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+  }
+
+  /* Cuando el panel de registro está activo, invertimos la visibilidad */
+  .container-double.right-panel-active .sign-in-container {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .container-double.right-panel-active .sign-up-container {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+    transform: none; /* Eliminamos cualquier desplazamiento lateral */
+  }
+
+  /* Ocultamos el overlay azul en móvil para que no estorbe */
+  .overlay-container-double {
+    display: none;
+  }
+
+  /* Ajuste de márgenes internos para que no se vea pegado al borde */
+  form {
+    padding: 0 20px;
+  }
 }
