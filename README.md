@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌾 Del Campo a tu Hogar
+# <img src="./LOGO.jpg" width="45" style="vertical-align: middle;" /> 🌾 Del Campo a tu Hogar
 
 **Plataforma de comercio justo para la venta directa de productos lácteos artesanales en la provincia de Ubaté.**
 
@@ -23,7 +23,7 @@ Este proyecto se desarrolla como propuesta dentro de la **Universidad de Cundina
 
 ## ✨ Características Especiales
 
-* **Sistema de Roles Doblados:** Accesos diferenciados para el perfil de Comprador (catálogo, carrito, historial de pedidos) y Productor Campesino (gestión de inventario, métricas de ventas).
+* **Sistema de Roles:** Accesos diferenciados para el perfil de Comprador (catálogo, carrito, historial de pedidos) y Productor Campesino (gestión de inventario, métricas de ventas).
 * **Catálogo de Venta Directa:** Filtrado inteligente de productos lácteos por tipo, volumen y productor.
 * **Panel de Control Simplificado:** Interfaz amigable orientada a facilitar la publicación de productos por parte de los productores locales.
 * **Diseño Responsivo Completo:** Experiencia fluida tanto en computadores de escritorio como en dispositivos móviles.
@@ -63,3 +63,53 @@ Del-Campo-a-tu-Hogar/
 │   ├── index.html
 │   └── package.json
 └── README.md                 # Documentación técnica del proyecto
+
+---
+
+## ⚡ Guía de Ejecución Rápida
+
+**Requisitos Previos**
+**Node.js** v18.0 o superior
+**npm** v9.0 o superior
+
+---
+
+## 1. Clonar el repositorio
+
+**Bash**
+git clone [https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git](https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git)
+cd Del-Campo-a-tu-Hogar
+
+---
+
+## 2. Ejecutar el Backend
+
+**Bash**
+cd backend
+npm install
+npm run dev
+
+---
+
+##3. Ejecutar el Frontend
+**Bash**
+cd ../frontend
+npm install
+npm run dev
+
+---
+
+##🔑 Credenciales de Prueba
+
+| Rol | Correo Electrónico | Contraseña |
+| :--- | :--- | :--- |
+| **Administrador** | admin@delcampo.co | admin123 |
+| **Productor / Campesino** | productor@delcampo.co | campesino123 |
+| **Cliente / Comprador** | cliente@delcampo.co | cliente123 |
+
+---
+
+## 👥 Equipo de Desarrollo
+
+**Andrés Santiago Gómez Castiblanco**
+**Daniel Santiago Suárez Alarcón**
