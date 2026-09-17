@@ -63,3 +63,16 @@ Del-Campo-a-tu-Hogar/
 │   ├── index.html
 │   └── package.json
 └── README.md                 # Documentación técnica del proyecto
+
+---
+
+## ⚡ Guía de Ejecución Rápida
+
+### Requisitos Previos
+* **Node.js** v18.0 o superior
+* **npm** v9.0 o superior
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git
+cd Del-Campo-a-tu-Hogar
