@@ -63,6 +63,7 @@ Del-Campo-a-tu-Hogar/
 │   ├── index.html
 │   └── package.json
 └── README.md                 # Documentación técnica del proyecto
+```text
 
 ## ⚡ Guía de Ejecución Rápida
 
