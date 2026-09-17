@@ -63,6 +63,7 @@ Del-Campo-a-tu-Hogar/
 │   ├── index.html
 │   └── package.json
 └── README.md                 # Documentación técnica del proyecto
+```
 
 ---
 
@@ -76,3 +77,35 @@ Del-Campo-a-tu-Hogar/
 ```bash
 git clone https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git
 cd Del-Campo-a-tu-Hogar
+```
+
+### 2. Ejecutar el Backend
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+### 3. Ejecutar el Frontend
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🔑 Credenciales de Prueba
+
+| Rol | Correo Electrónico | Contraseña |
+| :--- | :--- | :--- |
+| **Administrador** | `admin@delcampo.co` | `admin123` |
+| **Productor / Campesino** | `productor@delcampo.co` | `campesino123` |
+| **Cliente / Comprador** | `cliente@delcampo.co` | `cliente123` |
+
+---
+
+## 👥 Equipo de Desarrollo
+
+* **Andrés Santiago Gómez Castiblanco**
+* **Daniel Santiago Suárez Alarcón**
