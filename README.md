@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="./LOGO.jpg" width="45" style="vertical-align: middle;" /> 🌾 Del Campo a tu Hogar
+# <img src="./LOGO.jpg" width="45" style="vertical-align: middle;" />  Del Campo a tu Hogar
 
 **Plataforma de comercio justo para la venta directa de productos lácteos artesanales en la provincia de Ubaté.**
 
