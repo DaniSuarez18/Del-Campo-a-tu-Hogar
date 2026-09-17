@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="./LOGO.jpg" width="45" style="vertical-align: middle;" />  Del Campo a tu Hogar
+# <img src="./LOGO.jpg" width="45" style="vertical-align: middle;" /> 🌾 Del Campo a tu Hogar
 
 **Plataforma de comercio justo para la venta directa de productos lácteos artesanales en la provincia de Ubaté.**
 
@@ -15,8 +15,9 @@
 
 ## 📖 Acerca del Proyecto
 
-**Del Campo a tu Hogar** es una solución tecnológica diseñada para dinamizar la economía local del municipio de Ubaté. La plataforma busca reducir intermediarios en la cadena de distribución, permitiendo que los productores de leche, yogurt, arequipe y queso artesanal vendan sus productos directamente al consumidor final con precios transparentes y competitivos.
+**Del Campo a tu Hogar** es una solución tecnológica diseñada para dinamizar la economía local del municipio de Ubaté y sus alrededores. La plataforma elimina intermediarios en la cadena de distribución, permitiendo que los productores de leche, yogurt, arequipe y queso artesanal vendan sus productos directamente al consumidor final con precios transparentes y competitivos.
 
+Este proyecto se desarrolla como propuesta dentro de la **Universidad de Cundinamarca (Sede Ubaté)** para el programa de Ingeniería de Sistemas y Computación.
 
 ---
 
@@ -62,8 +63,6 @@ Del-Campo-a-tu-Hogar/
 │   ├── index.html
 │   └── package.json
 └── README.md                 # Documentación técnica del proyecto
-
----
 
 ## ⚡ Guía de Ejecución Rápida
 
