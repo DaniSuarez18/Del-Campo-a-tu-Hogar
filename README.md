@@ -1,19 +1,21 @@
 <div align="center">
 
-# <img src="./LOGO.jpg" width="45" style="vertical-align: middle;" />  Del Campo a tu Hogar
+<h1><img src="./LOGO.jpg" width="45" style="vertical-align: middle;" /> 🌾 Del Campo a tu Hogar</h1>
 
-**Plataforma de comercio justo para la venta directa de productos lácteos artesanales en la provincia de Ubaté.**
+<p><strong>Plataforma de comercio justo para la venta directa de productos lácteos artesanales en la provincia de Ubaté.</strong></p>
 
-![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-brightgreen)
-![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB)
-![Backend](https://img.shields.io/badge/Backend-Node.js%20%2F%20NestJS-339933)
-![Database](https://img.shields.io/badge/Base%20de%20Datos-PostgreSQL%20%2F%20Supabase-4169E1)
+<p>
+  <img src="https://img.shields.io/badge/Estado-En%20Desarrollo-brightgreen" alt="Estado" />
+  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB" alt="Frontend" />
+  <img src="https://img.shields.io/badge/Backend-Node.js%20%2F%20NestJS-339933" alt="Backend" />
+  <img src="https://img.shields.io/badge/Base%20de%20Datos-PostgreSQL%20%2F%20Supabase-4169E1" alt="Database" />
+</p>
 
 </div>
 
 ---
 
-## 📖 Acerca del Proyecto
+##  Acerca del Proyecto
 
 **Del Campo a tu Hogar** es una solución tecnológica diseñada para dinamizar la economía local del municipio de Ubaté y sus alrededores. La plataforma elimina intermediarios en la cadena de distribución, permitiendo que los productores de leche, yogurt, arequipe y queso artesanal vendan sus productos directamente al consumidor final con precios transparentes y competitivos.
 
@@ -21,7 +23,7 @@ Este proyecto se desarrolla como propuesta dentro de la **Universidad de Cundina
 
 ---
 
-## ✨ Características Especiales
+##  Características Especiales
 
 * **Sistema de Roles:** Accesos diferenciados para el perfil de Comprador (catálogo, carrito, historial de pedidos) y Productor Campesino (gestión de inventario, métricas de ventas).
 * **Catálogo de Venta Directa:** Filtrado inteligente de productos lácteos por tipo, volumen y productor.
@@ -30,7 +32,7 @@ Este proyecto se desarrolla como propuesta dentro de la **Universidad de Cundina
 
 ---
 
-## 🛠️ Stack Tecnológico y Justificación Técnica
+##  Stack Tecnológico y Justificación Técnica
 
 | Tecnología | Componente | ¿Por qué la elegimos? |
 | :--- | :--- | :--- |
@@ -42,7 +44,7 @@ Este proyecto se desarrolla como propuesta dentro de la **Universidad de Cundina
 
 ---
 
-## 📁 Estructura del Repositorio
+##  Estructura del Repositorio
 
 El proyecto utiliza una arquitectura de **monorepositorio** para mantener sincronizada la interfaz y la API web:
 
@@ -67,7 +69,7 @@ Del-Campo-a-tu-Hogar/
 
 ---
 
-## ⚡ Guía de Ejecución Rápida
+##  Guía de Ejecución Rápida
 
 ### Requisitos Previos
 * **Node.js** v18.0 o superior
@@ -75,7 +77,7 @@ Del-Campo-a-tu-Hogar/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git
+git clone [https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git](https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git)
 cd Del-Campo-a-tu-Hogar
 ```
 
@@ -95,7 +97,7 @@ npm run dev
 
 ---
 
-## 🔑 Credenciales de Prueba
+##  Credenciales de Prueba
 
 | Rol | Correo Electrónico | Contraseña |
 | :--- | :--- | :--- |
@@ -105,7 +107,7 @@ npm run dev
 
 ---
 
-## 👥 Equipo de Desarrollo
+##  Equipo de Desarrollo
 
 * **Andrés Santiago Gómez Castiblanco**
 * **Daniel Santiago Suárez Alarcón**
