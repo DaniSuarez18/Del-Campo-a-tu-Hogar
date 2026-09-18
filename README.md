@@ -17,9 +17,9 @@
 
 ##  Acerca del Proyecto
 
-**Del Campo a tu Hogar** es una solución tecnológica diseñada para dinamizar la economía local del municipio de Ubaté y sus alrededores. La plataforma elimina intermediarios en la cadena de distribución, permitiendo que los productores de leche, yogurt, arequipe y queso artesanal vendan sus productos directamente al consumidor final con precios transparentes y competitivos.
+**Del Campo a tu Hogar** es una solución tecnológica diseñada para dinamizar la economía local del municipio de Ubaté y sus alrededores. La plataforma reduce intermediarios en la cadena de distribución, permitiendo que los productores de leche, yogurt, arequipe y queso artesanal vendan sus productos directamente al consumidor final con precios transparentes y competitivos.
 
-Este proyecto se desarrolla como propuesta dentro de la **Universidad de Cundinamarca (Sede Ubaté)** para el programa de Ingeniería de Sistemas y Computación.
+Este proyecto se desarrolla como propuesta dentro de la **Universidad de Cundinamarca (Seccional Ubaté)** para el programa de Ingeniería de Sistemas y Computación.
 
 ---
 
@@ -77,7 +77,7 @@ Del-Campo-a-tu-Hogar/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git](https://github.com/DaniSuarez18/Del-Campo-a-tu-Hogar.git)
+git clone [https://github.com/danielsuarez-dev/del-campo-a-tu-hogar.git]
 cd Del-Campo-a-tu-Hogar
 ```
 
@@ -109,5 +109,5 @@ npm run dev
 
 ##  Equipo de Desarrollo
 
-* **Andrés Santiago Gómez Castiblanco**
+* **Andres Santiago Gomez Castiblanco**
 * **Daniel Santiago Suárez Alarcón**
